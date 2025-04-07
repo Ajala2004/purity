@@ -1,0 +1,40 @@
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+    background: linear-gradient(135deg, #0047ab 30%, #1e90ff 100%);
+    color: white;
+  }
+  
+  .hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .hero p {
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #f0f8ff; /* Light, readable text */
+  }
+  
+  .cta-button {
+    padding: 15px 35px;
+    font-size: 1.2rem;
+    background-color: #ffc107;
+    color: #0047ab;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #e0a800; /* Subtle hover effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }

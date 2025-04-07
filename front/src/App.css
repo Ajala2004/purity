@@ -1,0 +1,298 @@
+/* Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Montserrat:wght@300;400;600&family=Pacifico&display=swap');
+
+/* Base Styles */
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(135deg, #fff5f5 0%, #f8f0ff 100%);
+  color: #4a2c40;
+  text-align: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Terminal Styles */
+.terminal {
+  background-color: #1a1a2e;
+  color: #a4ebf3;
+  padding: 2rem;
+  border-radius: 8px;
+  font-family: 'Courier New', monospace;
+  white-space: pre-wrap;
+  max-width: 800px;
+  margin: 2rem auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  min-height: 200px;
+}
+
+.terminal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  background: #333;
+  border-radius: 8px 8px 0 0;
+}
+
+.terminal-cursor {
+  display: inline-block;
+  background-color: #a4ebf3;
+  width: 10px;
+  height: 20px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Memory Sections */
+.memory-section {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(164, 235, 243, 0.3);
+  max-width: 600px;
+  margin: 2rem auto;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+}
+
+.memory-section:hover {
+  transform: translateY(-5px) rotateX(5deg);
+}
+
+.section-title {
+  font-family: 'Pacifico', cursive;
+  color: #d23669;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section-content {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+/* Polaroid Image Frame */
+.polaroid {
+  background: white;
+  padding: 1rem 1rem 2rem 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transform: rotate(-2deg);
+  transition: transform 0.3s ease;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.polaroid:hover {
+  transform: rotate(1deg) scale(1.03);
+}
+
+.polaroid-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 1px solid #eee;
+}
+
+.polaroid-caption {
+  font-family: 'Pacifico', cursive;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+/* Navigation Buttons */
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.nav-button {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.prev {
+  background: linear-gradient(45deg, #a4ebf3, #84d4dd);
+  color: #1a1a2e;
+}
+
+.next {
+  background: linear-gradient(45deg, #ff9bb3, #d23669);
+  color: white;
+}
+
+.nav-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Proposal Section */
+.proposal-container {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.proposal {
+  background: white;
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(210, 54, 105, 0.2);
+  max-width: 600px;
+  position: relative;
+  z-index: 10;
+  transform-style: preserve-3d;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(2deg); }
+}
+
+.proposal-title {
+  font-family: 'Parisienne', cursive;
+  font-size: 3.5rem;
+  color: #d23669;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.proposal-question {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5rem;
+  color: #4a2c40;
+  margin-bottom: 1.5rem;
+}
+
+.proposal-subtext {
+  font-style: italic;
+  color: #888;
+  margin-bottom: 2.5rem;
+}
+
+/* Buttons */
+.buttons-container {
+  position: relative;
+  height: 120px;
+  margin: 2rem auto;
+  width: 300px;
+}
+
+.yes-button {
+  background: linear-gradient(45deg, #4caf50, #2e7d32);
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  box-shadow: 0 6px 15px rgba(46, 125, 50, 0.3);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.yes-button:hover {
+  transform: translateX(-50%) scale(1.05);
+  box-shadow: 0 8px 20px rgba(46, 125, 50, 0.4);
+}
+
+.no-button {
+  background: linear-gradient(45deg, #f44336, #c62828);
+  color: white;
+  padding: 0.8rem 1.8rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  z-index: 1;
+}
+
+/* Hearts */
+.heart {
+  position: absolute;
+  pointer-events: none;
+  animation: float-heart 3s ease-in-out forwards;
+  z-index: 1;
+}
+
+@keyframes float-heart {
+  0% { 
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% { 
+    transform: translateY(-100px) rotate(20deg);
+    opacity: 0;
+  }
+}
+
+/* Feedback Popup */
+.feedback-popup {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 15px 30px;
+  border-radius: 50px;
+  z-index: 100;
+  animation: fadeInOut 3s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0; transform: translateX(-50%) translateY(-20px); }
+  20%, 80% { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .memory-section, .proposal {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .proposal-title {
+    font-size: 2.8rem;
+  }
+  
+  .proposal-question {
+    font-size: 2rem;
+  }
+  
+  .polaroid-image {
+    height: 250px;
+  }
+}

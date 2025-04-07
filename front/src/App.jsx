@@ -19,7 +19,7 @@ function App() {
   const [windowSize, setWindowSize] = useState({
     width: window.innerWidth,
     height: window.innerHeight,
-  });
+  }); 
 
   const fullText = ` our-love-story.js\n\nInitializing romantic algorithms...\nLoading Purity's beautiful memories...\nRendering our future together...\n\n`;
   
